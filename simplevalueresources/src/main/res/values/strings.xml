@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SimpleValueResources</string>
+
+    <string name="textHeader">{code}kul;</string>
+
+    <string-array name="cities">
+        <item>Pune</item>
+        <item>Mumbai</item>
+        <item>Nagpur</item>
+        <item>Kolhapur</item>
+        <item>Sangli</item>
+    </string-array>
+</resources>
