@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StatusBarNotifications</string>
+    <string name="btnOkay">Okay</string>
+    <string name="notificationTicker">This i ticker</string>
+    <string name="notificationTitle">Title</string>
+    <string name="notificationContentInfo">Content Info</string>
+    <string name="notificationContentText">Content Text</string>
+</resources>

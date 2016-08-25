@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btnOkay">Okay</string>
+    <string name="notificationTicker">This i ticker</string>
+    <string name="notificationContentInfo">Content Info</string>
+</resources>
