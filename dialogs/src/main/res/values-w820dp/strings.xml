@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btnAlertDialog" />
+    <string name="btnDatePicker">Date Picker</string>
+    <string name="alertTitle">Title</string>
+    <string name="alertMsg">Message</string>
+    <string name="btnYes">Yes</string>
+</resources>
