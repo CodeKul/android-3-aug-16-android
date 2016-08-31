@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onReceive(Context context, Intent intent) {
 
+                    Log.i("@codekul","Our Receiver");
                     if(intent.getAction().equals(Intent.ACTION_POWER_CONNECTED)){
                         ((ImageView)findViewById(R.id.imageView)).setImageResource(R.drawable.ic_battery_charging_full_black_48px);
                     }
@@ -27,20 +30,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btnOkay).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(getResources().getString(R.string.customAction));
+                sendBroadcast(intent);
+               // sendOrderedBroadcast(intent,null);
+            }
+        });
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(Intent.ACTION_POWER_CONNECTED);
-        filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
-        registerReceiver(receiver,filter);
+        registerViaCode();
     }
 
     @Override
     protected void onStop() {
         unregisterReceiver(receiver);
         super.onStop(); // !imp
+    }
+
+    private void registerViaCode(){
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_POWER_CONNECTED);
+        filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+        filter.addAction(getResources().getString(R.string.customAction));
+        registerReceiver(receiver,filter);
     }
 }

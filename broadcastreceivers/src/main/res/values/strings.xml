@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BroadcastReceivers</string>
+    <string name="btnOkay">Okay</string>
+    <string name="customAction">com.codekul.receiver.custom</string>
 </resources>
