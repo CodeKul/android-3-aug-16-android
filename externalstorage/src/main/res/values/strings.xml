@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ExternalStorage</string>
+    <string name="mediaError">Media not mounted</string>
+</resources>
