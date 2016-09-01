@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Sqlite</string>
+    <string name="btnInsert">Insert</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnQuery">Query</string>
+
+    <string name="tableName">myTable</string>
+    <string name="colMyName">myName</string>
+    <string name="colMyCity">myCity</string>
+    <string name="dbName">myDb</string>
+
+</resources>
