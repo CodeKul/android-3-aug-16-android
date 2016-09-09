@@ -1,0 +1,6 @@
+{
+  "name" : "Android",
+  "city" : "pune",
+  "age":30,
+  "places" : ["Deccan","Camp","Kothrud"]
+}
